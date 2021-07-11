@@ -1,0 +1,203 @@
+*,
+*::before,
+*::after {
+  font-family: Gotham Rounded, sans-serif;
+}
+
+html {
+  font-size: 25px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.mr-1 {
+  margin-right: 5px;
+}
+
+.btn {
+  background: none;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  font-size: inherit;
+  border-radius: 5px;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.btn--primary {
+  color: white;
+  background-color: hsl(200, 100%, 50%);
+}
+
+.btn--primary:hover {
+  background-color: hsl(200, 100%, 35%);
+}
+
+.btn--danger {
+  color: white;
+  background-color: hsl(0, 100%, 50%);
+}
+
+.btn--danger:hover {
+  background-color: hsl(0, 100%, 35%);
+}
+
+@font-face {
+  font-family: Gotham Rounded;
+  src: url("../fonts/GothamRounded-Bold.woff") format("woff"),
+    url("../fonts/GothamRounded-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Gotham Rounded;
+  src: url("../fonts/GothamRounded-Light.woff") format("woff"),
+    url("../fonts/GothamRounded-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Gotham Rounded;
+  src: url("../fonts/GothamRounded-Book.woff") format("woff"),
+    url("../fonts/GothamRounded-Book.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ingredient-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  row-gap: 5px;
+  column-gap: 40px;
+  justify-content: flex-start;
+}
+
+.recipe-list {
+  border-right: 1px solid black;
+  min-height: 100vh;
+  width: 50%;
+}
+
+.recipe-list__add-recipe-btn-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.recipe {
+  padding: 20px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid black;
+}
+
+.recipe:last-child {
+  border-bottom: none;
+  padding-bottom: 10px;
+}
+
+.recipe__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.recipe__title {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.recipe__row {
+  margin-top: 10px;
+}
+
+.recipe__label {
+  margin-right: 5px;
+}
+
+.recipe__value {
+  font-weight: 300;
+}
+
+.recipe__value--indented {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.recipe__instructions {
+  white-space: pre-wrap;
+}
+.recipe-edit {
+  padding: 30px;
+  box-sizing: border-box;
+  padding-top: 10px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50%;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.recipe-edit__remove-button-container {
+  text-align: end;
+}
+
+.recipe-edit__remove-button {
+  padding: 0;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.recipe-edit__details-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  row-gap: 10px;
+  column-gap: 40px;
+}
+
+.recipe-edit__label {
+  font-weight: bold;
+}
+
+.recipe-edit__input {
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: inherit;
+  padding: 5px 10px;
+  outline: none;
+  width: 100%;
+}
+
+textarea.recipe-edit__input {
+  resize: none;
+  height: 200px;
+}
+
+.recipe-edit__ingredient-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, auto);
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.recipe-edit__add-ingredient-btn-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .recipe-edit__details-grid,
+  .recipe-edit__ingredient-grid {
+    grid-template-columns: 1fr;
+  }
+}
